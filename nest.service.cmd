@@ -1,0 +1,1 @@
+nest g s users/providers/users --flat  --no-spec
