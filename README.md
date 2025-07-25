@@ -1,4 +1,4 @@
-# 🚀 NestJS Server with PostgreSQL & TypeORM
+# 🚀 Shodesh-board-server
 
 This is a modular and scalable backend built with [NestJS](https://nestjs.com/) using [PostgreSQL](https://www.postgresql.org/) as the database and [TypeORM](https://typeorm.io/) as the ORM.
 
