@@ -13,7 +13,7 @@ import { AuthModule } from './auth/auth.module';
       type: 'postgres',
       url: process.env.DATABASE_URI,
       autoLoadEntities: true,
-      synchronize: true
+      synchronize: process.env.DATABASE_SYNC === 'true',
     }),
     AuthModule
   ],

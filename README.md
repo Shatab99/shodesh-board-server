@@ -34,8 +34,12 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
-DATABASE_URI=postgresql://username:password@localhost:5432/your_database
-PORT=3000
+DATABASE_URI = <Postgress URI>
+DATABASE_SYNC = true
+JWT_SECRET = <require("crypto").randomBytes(64).toString('hex')>
+JWT_AUDIENCE = localhost:3000
+JWT_ISSUER = localhost:3000
+JWT_ACCESS_TOKEN_TTL = 3600
 ```
 
 > Make sure your PostgreSQL server is running and the database exists.
