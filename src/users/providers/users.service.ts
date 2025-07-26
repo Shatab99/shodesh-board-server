@@ -24,10 +24,14 @@ export class UsersService {
         if (existingUser) throw new BadRequestException('User already exists');
 
         // Hash the password before saving
-        user.password = await this.hashingService.hashPassword(user.password); 
+        user.password = await this.hashingService.hashPassword(user.password);
 
         const newUser = this.userRepository.create(user);
         await this.userRepository.save(newUser);
         return { success: true, message: 'User created successfully' };
+    }
+
+    public async getMe(payload: { sub: number, email: string }) {
+        return await this.userRepository.findOne({ where: { id: payload.sub } });
     }
 }
